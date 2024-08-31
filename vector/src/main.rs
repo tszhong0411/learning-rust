@@ -1,3 +1,9 @@
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
 fn main() {
     let mut v = Vec::new();
 
@@ -21,4 +27,10 @@ fn main() {
         *i += 50;
         println!("{}", i);
     }
+
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from("blue")),
+        SpreadsheetCell::Float(10.12),
+    ];
 }
